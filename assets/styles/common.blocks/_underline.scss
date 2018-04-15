@@ -1,0 +1,17 @@
+.underline {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0.2rem solid $highlight-bg-color;
+    box-shadow: inset 0 -0.3rem 0 $highlight-bg-color;
+    color: inherit;
+    transition: background-color 0.1s cubic-bezier(.33,.66,.66,1);
+    &--big {
+        padding: 0 0.8rem;
+    }
+    &--strech-right {
+        padding-right: 0.4rem;
+    }
+}
+a.underline:hover {
+    background-color: $highlight-bg-color;
+}

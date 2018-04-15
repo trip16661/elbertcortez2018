@@ -1,10 +1,14 @@
-const merge                   = require( 'webpack-merge' );
-const commonConfig            = require( './webpack.common.js' );
-const webpack                 = require( 'webpack' );
-const OptimizeCssAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
-const ExtractTextPlugin       = require( 'extract-text-webpack-plugin' );
+const merge = require('webpack-merge');
+const path = require( 'path' );
+const commonConfig = require('./webpack.common.js');
+const webpack = require('webpack');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const indexHTML = path.resolve( __dirname, '../index.html' )
 
-module.exports = merge( commonConfig, {
+module.exports = merge(commonConfig, {
     devtool: 'source-map',
     module: {
         rules: [
@@ -12,48 +16,66 @@ module.exports = merge( commonConfig, {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: [ 
-                        'css-loader', 
+                    use: [
+                        'css-loader',
+                        'resolve-url-loader',
                         {
-                            loader: 'postcss-loader', 
+                            loader: 'postcss-loader',
                             options: {
                                 config: {
                                     path: './config/postcss.config.js'
-                                }
+                                },
+                                sourceMap: true
                             }
                         },
-                        'sass-loader' 
+                        'sass-loader?sourceMap'
                     ]
                 })
+            },
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        root: path.resolve(__dirname, '../'),
+                        attrs: [':data-src']
+                    }
+                }
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'img-loader',
+                        options: {
+                            limit: 15000,
+                            name: 'images/[name].[ext]'
+                        }
+                    },
+                ],
             }
         ]
     },
+    mode: 'production',
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            title: 'Elbert Cortez',
+            hash: true,
+            template: indexHTML
+        }),
         new webpack.LoaderOptionsPlugin({
-            minimize: true,
+            // minimize: true,
             debug: false
         }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                'NODE_ENV': JSON.stringify( 'production' )
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            beautify: false,
-            mangle: {
-                screw_ie8: true,
-                keep_fnames: true
-            },
-            compress: {
-                screw_ie8: true
-            },
-            comments: false
-        }),
-        new webpack.optimize.CommonsChunkPlugin( 'common' ),
         new OptimizeCssAssetsPlugin({
-            cssProcessorOptions: { discardComments: {removeAll: true } },
+            cssProcessorOptions: { discardComments: { removeAll: true } },
             canPrint: true
-          }),
-        new ExtractTextPlugin( "styles.css" )
+        }),
+        new ExtractTextPlugin('styles.css'),
+        new CleanWebpackPlugin(['dist'], {
+            root: path.resolve( __dirname, '../' )
+        })
     ]
 });

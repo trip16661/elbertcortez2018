@@ -5,6 +5,247 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+    <body id="main-page">
+        <header>
+            <nav id="nav" class="nav">
+                <h1 class="logo"><a class="logo__link" href="/" rel="home"><img class="logo__img" src="/assets/images/svg/elbert-logo.svg" alt="Elbert Cortez"></a></h1>
+                <div id="burger" class="nav__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#workflow" class="nav__link">Workflow</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero section">
+            <div class="hero__cta">
+                <h2>I design and build...</h2>
+                <ul>
+                    <li>Landing pages</li>
+                    <li>Wordpress Sites</li>
+                    <li>Ecommerce Sites</li>
+                </ul>
+                <button class="button">
+                    Lets talk about your project
+                </button>
+            </div>
+            <div class="hero__showcase">
+                <div>
+                    <img src="/assets/images/phone-laptop-mockup.png" alt="">
+                    <blockquote class="hero__showcase-testimonial">
+                        <p>
+                            Elbert, This is perfect! We really love it.</br>
+                            The font, the layout, overall feel and color scheme are exellent.
+                        </p>
+                        <footer>
+                            <b>- Seth Trachy</b>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>   
+        </section>
+        <section class="technologies">
+            <ul class="technologies__list">
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/html-css-js-icon.png" alt="">
+                </li>
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/react-icon.png" alt="">
+                </li>
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/node-icon.png" alt="">
+                </li>
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/php-icon.png" alt="">
+                </li>
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/wordpress-icon.png" alt="">
+                </li>
+                <li class="technologies__list-item">
+                    <img src="/assets/images/icons/google-analytics-icon.png" alt="">
+                </li>
+            </ul>
+        </section>
+        <section class="section showcase-project">
+            <div class="showcase-project__gallery">
+                <img src="/assets/images/neurolyzer.png" alt="">
+            </div>
+            <div class="showcase-project__info">
+                <h4>// most recent</h4>
+                <h2 class="section__title">Neurolyzers</h2>
+                <ul>
+                    <li class="tag">Wordpress</li>
+                    <li class="tag">HTML5/CSS</li>
+                    <li class="tag">JavaScript</li>
+                    <li class="tag">Divi Theme</li>
+                    <li class="tag">PHP</li>
+                </ul>
+                <p class="showcase-project__description">
+                    Neurolyzers is a marketing/neurousability startup, they needed a site and had very clear idea of the overall look of the site which made things easier and faster. They required the usage of the popular theme framework <b>DIVI</b> as the base for their Back-End.
+                </p>
+                <a href="#" class="underline underline--big link link--size-big">visit website</a>
+            </div>
+            <div class="border testimonial">
+                <img src="/assets/images/Tom Winkler.jpg" alt="" class="testimonial__imagen">
+                <div class="testimonial__rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <blockquote class="testimonial__quote">
+                    <p>Elbert only deserves a 10/10 score, and we happily give him this due credit. We have hired Elbert for building our website and we are very satisfied with his quality of work. Elbert has proved to be an excellent worker, always meeting our demands in time and often exceeding our expectations by showing initiative and going those extra few miles. Elbert is someone who shows a very professional, pro-active attitude and shows great creativity in his work. I would absolutely recommend Elbert and I am glad that we can keep employing Elbert for our future jobs.</p>
+                    <footer>
+                        <b class="testimonial__source">Tom & Micha, CO-CEOS, Neurolyzers</b>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>       
+        <section id="projects" class="section section--color-lightgray section--wave"> 
+            <header class="section__head"><h2 class="section__title">More Projects</h2></header>
+            <main class="portfolio">
+                <div class="portfolio__item">
+                    <a href="http://commonquartet.elbertcortez.com/">
+                        <img src="/assets/images/portfolio/Common Quartet.png" alt="">
+                    </a>
+                </div>
+                <div class="portfolio__item">
+                    <a href="http://ahaevolve.com/">
+                        <img src="/assets/images/portfolio/ahaevolve.png" alt="">
+                    </a>
+                </div>
+                <div class="portfolio__item">
+                    <a href="https://www.progrowlights.ca/">
+                        <img src="/assets/images/portfolio/site-progrow.png" alt="">
+                    </a>
+                </div>
+            </main>    
+        </section>
+        <section id="workflow" class="section section__workflow">
+            <header class="section__head">
+                <h2 class="section__title section__title--center">Workflow</h2>
+            </header>
+            <ol class="workflow">
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">1.</span>
+                    <img src="/assets/images/svg/icon-scope.svg" alt="">
+                    <h4>Scope & Goal Definition</h4>
+                    <p>
+                        We'll set goals, expectations and timeframes to guarantee a healthy client-developer relationship.</p>
+                </li>
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">2.</span>
+                    <img src="/assets/images/svg/icon-wireframe.svg" alt="">
+                    <h4>Wireframe Creation</h4>
+                    <p>
+                        On this stage we define how the content and features comunicate with eachother on a visual level.
+                    </p>
+                </li>
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">3.</span>
+                    <img src="/assets/images/svg/icon-design.svg" alt="">
+                    <h4>Design</h4>
+                    <p>
+                        Ideas are expressed into something you can see and judge. We'll make sure that it represents you or your company brand.
+                    </p>
+                </li>
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">4.</span>
+                    <img src="/assets/images/svg/icon-development.svg" alt="">
+                    <h4>Development.</h4>
+                    <p>
+                        Content and code transform the design into a finished product that we can touch and feel. This process is usually the lengthiest of all.
+                    </p>
+                </li>
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">5.</span>
+                    <img src="/assets/images/svg/icon-launch.svg" alt="">
+                    <h4>Launch.</h4>
+                    <p>
+                        After quality assurance/testing we finally introduce it to the world, optimized for major search engines. 
+                    </p>
+                </li>
+                <li class="workflow__item">
+                    <span class="underline underline--strech-right">6.</span>
+                    <img src="/assets/images/svg/icon-nurture.svg" alt="">
+                    <h4>Ex.</h4>
+                    <p>
+                        I care about your success after launch. We can continue to work together for future support and maintenance.
+                    </p>
+                </li>
+            </ol>
+            <footer class="border extra-info">
+                <div class="extra-info__assurance">
+                    <h4 class="extra-info__title">
+                        100% Clarity Guaranteed 
+                    </h4>
+                    <p>
+                        Nothing's worse than being left in the dark when it comes to knowing how much progress has been made on your project. We'will use Trello by Atlassian every step of the way so you can have visibility at all times.</p>
+                        
+                    </div>
+                    <div class="extra-info__availability">
+                        <h4 class="extra-info__title">
+                            Availabilities
+                        </h4>
+                        <p>My schedule for April, May and June is currently open.<a href="#" class="underline link">Book your project in now!</a></p>
+                </div>
+            </footer>
+        </section>   
+        <section id="contact" class="section section--wave section--wave-top section--color-lightgray section__contact-form">
+            <header class="section__head">
+                    <h2 class="section__title section__title--center">
+                        Want to work together?
+                    </h2>
+                    <p class="section__description section__description--center">
+                        There is no project too big or too small, so please leave a message! 
+                        You will have a response to your enquiry within 24 hours.
+                    </p>
+            </header>
+            <form class="form" action="https://formspree.io/elbertraudry@gmail.com"
+      method="POST">
+                <fieldset class="form__group">
+                    <label class="form__label form__label--hidden" for="name">Your name</label>
+                    <input class="form__imput-field"  type="text" placeholder="Name" name="name" required>
+                </fieldset>
+                <fieldset class="form__group">
+                    <label class="form__label form__label--hidden" for="name">Your email</label>
+                    <input class="form__imput-field"  type="email" placeholder="Email" name="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+                </fieldset>
+                <fieldset class="form__group">
+                    <label class="form__label form__label--hidden" for="name">Website (if applicable)</label>
+                    <input class="form__imput-field"  type="text" placeholder="Website (if applicable)" name="website">
+                </fieldset>
+                <fieldset class="form__group">
+                    <label class="form__label form__label--hidden" for="name">Timeframe</label>
+                    <input class="form__imput-field"  type="text" placeholder="Timeframe(e.g. 1 week, 2 months)" name="timeframe">
+                </fieldset>
+                <textarea 
+                    class="form__imput-field"
+                    name="subject" placeholder="Any other details - this is your chance to tell me more." id="" cols="30" rows="10"required></textarea>
+                <input type="hidden" name="_next" value="//elbertcortez.com" />
+                <input type="hidden" name="_subject" value="New Job" />
+                <button class="button button--center" type="submit" value="Let's get started !">Let's get started !</button>
+            </form>
+        </section>
+        <footer class="section section--color-darkgray footer">
+            <nav>
+                <h1 class="logo logo__footer"><a class="logo__link" href="/" rel="home"><img class="logo__img" src="/assets/images/svg/elbert-logo.svg" alt="Elbert Cortez"></a></h1>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#workflow">Workflow</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <p>Elbert Cortez &copy; 2018</p>
+            <ul>
+                <li><a class="icon icon__upwork" href="https://www.upwork.com/freelancers/~0124884f7078cca057"><img src="/assets/images/svg/Upwork.svg" alt=""></a></li>
+                <li><a class="icon icon__github" href="https://github.com/trip16661"><img src="/assets/images/svg/icon-github.svg" alt=""></a></li>
+            </ul>
+        </footer>
     </body>
 </html>

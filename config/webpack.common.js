@@ -1,5 +1,4 @@
-const path              = require( 'path' );
-const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const path = require( 'path' );
 
 module.exports = {
     entry: path.resolve( __dirname, '../assets/scripts/bundle.js' ),
@@ -15,45 +14,17 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
 				query: {
-                    presets: [ 'es2015' ]
+                    presets: [ 'env' ]
 				}
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: [ 'style-loader', 'css-loader', 'resolve-url-loader' ]
             },
             {
-                test: /\.(jpg|png|gif)$/,
-                loader: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'images/[name].[ext]'
-                        } 
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true
-                            },
-                            gifsicle: {
-                                interlaced: false
-                            },
-                            optipng: {
-                                optimizationLevel: 2
-                            },
-                            pngquant: {
-                                quality: '75-90',
-                                speed: 3
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(ttf|eot|woff|woff2|svg)$/,
+                test: /\.(ttf|eot|otf|woff|woff2|svg)$/,
                 loader: 'file-loader',
+                exclude: [/images/],
                 options: {
                     name: 'fonts/[name].[ext]'
                 }
@@ -61,10 +32,5 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            hash: true,
-            template: path.resolve( __dirname, '../index.html' )
-        })
     ]
 };

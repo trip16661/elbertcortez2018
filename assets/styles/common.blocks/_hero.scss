@@ -1,0 +1,61 @@
+.hero {
+    height: 90vh;
+    margin-bottom: 4.4rem;
+    background: url('/assets/images/svg/hero-bg1.svg') no-repeat;
+    background-size: cover;
+    background-position: 15%;
+    position: relative;
+    padding-top: 11rem;
+    @include for-size(600px) {
+    }
+    @include for-size(md) {
+        margin-bottom: 6.4rem;
+        background-position: 1%;
+    }
+    @include for-size(lg) {
+        margin-bottom: 13.4rem;
+    }
+    &__cta {
+        color: $typography-color-inverse;
+        h2 {
+            margin-top: 0;
+            font-family: $proximanova-bold;
+        }
+        ul {
+            @include list-reset;
+            padding-left: 0.7rem;
+            padding: 0 $base-padding;
+            margin-bottom: 2rem;
+        }
+    }
+    &__showcase {
+        position: relative;
+        display: none;
+        @include for-size(600px) {
+            display: block;
+            position: absolute;
+            top: 11rem;
+            right: 0rem;
+        }
+        img {
+            @include for-size(600px) {
+                width: 62vw;
+                height: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    &__showcase-testimonial {
+        position: relative;
+        font-size: 0.6rem;
+        top: 33vw;
+        right: 8vw;
+        text-align: right;
+        margin: 0;
+        @include for-size(md) {
+            font-size: 0.8rem;
+        }
+    }
+}

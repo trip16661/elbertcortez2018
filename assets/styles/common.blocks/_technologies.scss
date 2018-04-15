@@ -1,0 +1,30 @@
+.technologies {
+    &__list {
+        @include list-reset;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 $base-padding*4;
+        @include for-size(sm) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__list-item {
+        height: 3.3rem;
+        display: block;
+        margin-bottom: $base-padding;
+        @include for-size(sm) {
+            flex: 30%;
+            margin-right: 0.9rem;
+        }
+        @include for-size(md) {
+            flex: 10%;
+            margin-right: $base-padding;
+        }
+        img {
+            max-width:100%;
+            max-height:100%;
+        }
+    }
+}
