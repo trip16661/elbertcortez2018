@@ -1,0 +1,36 @@
+@import './tag';
+@import './button';
+@import './icon';
+@import './logo';
+@import './link';
+@import './border';
+@import './underline';
+@import './nav';
+@import './section';
+@import './form';
+@import './hero';
+@import './technologies';
+@import './showcase-project';
+@import './testimonial';
+@import './portfolio';
+@import './workflow';
+@import './extra-info';
+@import './footer';
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $section-base-color;
+    font-size: 16px;
+    font-family: $proximanova-regular;
+    color: $typography-color;
+}
+.noscroll {
+    overflow: hidden;
+}

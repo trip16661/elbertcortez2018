@@ -1,0 +1,46 @@
+.form {
+    margin: auto;
+    @include for-size(md) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 40rem;
+    }
+    &__imput-field {
+        width: 100%;
+        margin-bottom: 1.1rem;
+        width: 100%;
+        padding: 1rem;
+        outline: transparent;
+        border: solid #fff 2px;
+        border-bottom: solid 2px $color-green;
+        &::placeholder { 
+            color: rgba($typography-color, .8);
+            font-family: $proximanova-cursive-regular;
+        }
+        &[invalid] {
+            border-bottom: solid 2px $color-danger;
+        }
+        &:active, &:focus {
+            border-bottom: solid 2px $color-dark-green;
+        }
+    }
+    &__group {
+        border: none;
+        margin: 0;
+        padding:  0;
+        @include for-size(md) {
+            width: 48.5%;
+        }
+    }
+    &__label {
+        &--hidden {
+            position: absolute; 
+            overflow: hidden; 
+            clip: rect(0 0 0 0); 
+            height: 1px; width: 1px; 
+            margin: -1px; padding: 0; border: 0; 
+
+        }
+    }
+}

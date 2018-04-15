@@ -1,0 +1,16 @@
+.logo {
+    @include h-reset;
+    line-height: 0;
+    display: inline-block;
+    z-index: 511;
+    width: 8rem;
+    &__link, &__img {
+        @include img-responsive;
+    }
+    &__link {
+        display: inline-block;
+    }
+    &__footer {
+        margin-bottom: 1rem;
+    }
+}

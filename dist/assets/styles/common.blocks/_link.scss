@@ -1,0 +1,7 @@
+.link {
+    @include link-reset;
+    color: $link-color;
+    &--size-big {
+        font-size: 1.3rem;
+    }
+}

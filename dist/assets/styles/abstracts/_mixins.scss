@@ -1,0 +1,48 @@
+// Resets 
+@mixin img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+@mixin list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+@mixin h-reset {
+    margin: 0;
+}
+@mixin link-reset {
+    text-decoration: none;
+}
+@mixin for-size($size) {
+    @if $size==xs {
+        @media (min-width: 425px) {
+            @content;
+        }
+    }
+    @else if $size==sm {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+    @else if $size==md {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+    @else if $size==lg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size==xlg {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $size) {
+            @content;
+        }
+    }
+}
