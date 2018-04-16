@@ -2,16 +2,12 @@
     position: absolute;
     width: 100%;
     margin: 0;
-    padding: 4rem 2rem 0 2rem;
-    height: 3rem;
+    padding: 5rem 2.6rem 0 2.6rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    @include for-size(sm) {
-        padding: $padding-body $padding-body 0 $padding-body;
-    }
     &__burger {
+        cursor: pointer;
         z-index: 311;
         position: relative;
         span {
@@ -42,7 +38,7 @@
         @include list-reset;
         opacity: .1;
         display: none;
-        background-color: rgba($color-green, 0.889);
+        background-color: $color-green;
         position: absolute;
         top: 0;
         right: 0;
@@ -55,7 +51,11 @@
         text-align: center;
     }
     &__link {
-        padding: 1rem 4rem;
+        padding: 2rem 10rem;
+        font-family: $proximanova-semibold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
         display: inline-block;
         text-decoration: none;
         color: $typography-color-inverse;
