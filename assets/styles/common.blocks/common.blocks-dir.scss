@@ -27,9 +27,12 @@ html, body {
 }
 body {
     background-color: $section-base-color;
-    font-size: 16px;
     font-family: $proximanova-regular;
     color: $typography-color;
+    font-size: 16px;
+    @include for-size(md) {
+        font-size: 1.1rem;
+    }
 }
 .noscroll {
     overflow: hidden;

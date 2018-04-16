@@ -1,6 +1,8 @@
 .button {
+    @include h-reset;
+    @include link-reset;
     position: relative;
-    display: block;
+    display: inline-block;
     padding: .8rem 0.56rem;
     border-radius: 0.1rem;
     cursor: pointer;
@@ -8,12 +10,11 @@
     outline: none;
     background-color: $btn-bg-color;
     border: none;
-    box-shadow: -1px 1px 4px 0px #4e4e4e7a;
     color: $typography-color-inverse;
     font-size: 0.9rem;
     @include for-size(md) {
-        padding: .9rem 2rem;
-        font-size: 1.1rem;
+        padding: .8rem 1.5rem;
+        font-size: 1.3rem;
     }
     //ripple effect
     &::before {
@@ -47,6 +48,8 @@
         animation: ripple 0.7s ease-out;
     }
     &--center {
-        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

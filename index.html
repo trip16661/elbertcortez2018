@@ -29,9 +29,9 @@
                     <li>Wordpress Sites</li>
                     <li>Ecommerce Sites</li>
                 </ul>
-                <button class="button">
+                <a target="_blank" href="#contact" class="button">
                     Lets talk about your project
-                </button>
+                </a>
             </div>
             <div class="hero__showcase">
                 <div>
@@ -42,7 +42,7 @@
                             The font, the layout, overall feel and color scheme are exellent.
                         </p>
                         <footer>
-                            <b>- Seth Trachy</b>
+                            <b class="underline underline--strech-right">— Seth Trachy</b>
                         </footer>
                     </blockquote>
                 </div>
@@ -87,7 +87,7 @@
                 <p class="showcase-project__description">
                     Neurolyzers is a marketing/neurousability startup, they needed a site and had very clear idea of the overall look of the site which made things easier and faster. They required the usage of the popular theme framework <b>DIVI</b> as the base for their Back-End.
                 </p>
-                <a href="#" class="underline underline--big link link--size-big">visit website</a>
+                <a target="_blank" href="http://neurolyzers.nl/" class="underline underline--big link link--size-big">visit website</a>
             </div>
             <div class="border testimonial">
                 <img src="/assets/images/Tom Winkler.jpg" alt="" class="testimonial__imagen">
@@ -110,17 +110,17 @@
             <header class="section__head"><h2 class="section__title">More Projects</h2></header>
             <main class="portfolio">
                 <div class="portfolio__item">
-                    <a href="http://commonquartet.elbertcortez.com/">
+                    <a target="_blank" href="http://commonquartet.elbertcortez.com/">
                         <img src="/assets/images/portfolio/Common Quartet.png" alt="">
                     </a>
                 </div>
                 <div class="portfolio__item">
-                    <a href="http://ahaevolve.com/">
+                    <a target="_blank" href="http://ahaevolve.com/">
                         <img src="/assets/images/portfolio/ahaevolve.png" alt="">
                     </a>
                 </div>
                 <div class="portfolio__item">
-                    <a href="https://www.progrowlights.ca/">
+                    <a target="_blank" href="https://www.progrowlights.ca/">
                         <img src="/assets/images/portfolio/site-progrow.png" alt="">
                     </a>
                 </div>
@@ -143,7 +143,7 @@
                     <img src="/assets/images/svg/icon-wireframe.svg" alt="">
                     <h4>Wireframe Creation</h4>
                     <p>
-                        On this stage we define how the content and features comunicate with eachother on a visual level.
+                        In this stage we define how the content and features communicate with eachother on a visual level.
                     </p>
                 </li>
                 <li class="workflow__item">
@@ -157,7 +157,7 @@
                 <li class="workflow__item">
                     <span class="underline underline--strech-right">4.</span>
                     <img src="/assets/images/svg/icon-development.svg" alt="">
-                    <h4>Development.</h4>
+                    <h4>Development</h4>
                     <p>
                         Content and code transform the design into a finished product that we can touch and feel. This process is usually the lengthiest of all.
                     </p>
@@ -165,7 +165,7 @@
                 <li class="workflow__item">
                     <span class="underline underline--strech-right">5.</span>
                     <img src="/assets/images/svg/icon-launch.svg" alt="">
-                    <h4>Launch.</h4>
+                    <h4>Launch</h4>
                     <p>
                         After quality assurance/testing we finally introduce it to the world, optimized for major search engines. 
                     </p>
@@ -173,7 +173,7 @@
                 <li class="workflow__item">
                     <span class="underline underline--strech-right">6.</span>
                     <img src="/assets/images/svg/icon-nurture.svg" alt="">
-                    <h4>Ex.</h4>
+                    <h4>Nurture</h4>
                     <p>
                         I care about your success after launch. We can continue to work together for future support and maintenance.
                     </p>
@@ -192,7 +192,7 @@
                         <h4 class="extra-info__title">
                             Availabilities
                         </h4>
-                        <p>My schedule for April, May and June is currently open.<a href="#" class="underline link">Book your project in now!</a></p>
+                        <p>My schedule for April, May and June is currently open.<a href="#contact" class="underline link">Book your project in now!</a></p>
                 </div>
             </footer>
         </section>   
@@ -210,15 +210,15 @@
       method="POST">
                 <fieldset class="form__group">
                     <label class="form__label form__label--hidden" for="name">Your name</label>
-                    <input class="form__imput-field"  type="text" placeholder="Name" name="name" required>
+                    <input class="form__imput-field"  type="text" placeholder="Name" name="name" autocomplete="name" required>
                 </fieldset>
                 <fieldset class="form__group">
                     <label class="form__label form__label--hidden" for="name">Your email</label>
-                    <input class="form__imput-field"  type="email" placeholder="Email" name="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+                    <input class="form__imput-field"  type="email" placeholder="Email" name="email" autocomplete="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
                 </fieldset>
                 <fieldset class="form__group">
                     <label class="form__label form__label--hidden" for="name">Website (if applicable)</label>
-                    <input class="form__imput-field"  type="text" placeholder="Website (if applicable)" name="website">
+                    <input class="form__imput-field"  type="url" placeholder="Website (if applicable)" name="website">
                 </fieldset>
                 <fieldset class="form__group">
                     <label class="form__label form__label--hidden" for="name">Timeframe</label>
@@ -227,7 +227,7 @@
                 <textarea 
                     class="form__imput-field"
                     name="subject" placeholder="Any other details - this is your chance to tell me more." id="" cols="30" rows="10"required></textarea>
-                <input type="hidden" name="_next" value="//elbertcortez.com" />
+                <input type="hidden" name="_next" value="https://elbertcortez.com" />
                 <input type="hidden" name="_subject" value="New Job" />
                 <button class="button button--center" type="submit" value="Let's get started !">Let's get started !</button>
             </form>
@@ -243,8 +243,8 @@
             </nav>
             <p>Elbert Cortez &copy; 2018</p>
             <ul>
-                <li><a class="icon icon__upwork" href="https://www.upwork.com/freelancers/~0124884f7078cca057"><img src="/assets/images/svg/Upwork.svg" alt=""></a></li>
-                <li><a class="icon icon__github" href="https://github.com/trip16661"><img src="/assets/images/svg/icon-github.svg" alt=""></a></li>
+                <li><a target="_blank" class="icon icon__upwork" href="https://www.upwork.com/freelancers/~0124884f7078cca057"><img src="/assets/images/svg/Upwork.svg" alt=""></a></li>
+                <li><a target="_blank" class="icon icon__github" href="https://github.com/trip16661"><img src="/assets/images/svg/icon-github.svg" alt=""></a></li>
             </ul>
         </footer>
     </body>

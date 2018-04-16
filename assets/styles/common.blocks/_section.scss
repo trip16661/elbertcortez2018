@@ -28,6 +28,9 @@
         font-size: 1.8rem;
         @include h-reset;
         margin-bottom: 1.3rem;
+        @include for-size(md) {
+            font-size: 2.4rem;
+        }
     }
     &__description {
         margin-top: 0;
