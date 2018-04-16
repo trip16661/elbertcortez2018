@@ -1,4 +1,6 @@
-const path = require( 'path' );
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const indexHTML = path.resolve( __dirname, '../index.html' );
 
 module.exports = {
     entry: path.resolve( __dirname, '../assets/scripts/bundle.js' ),
@@ -32,5 +34,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            title: 'Elbert Cortez',
+            hash: true,
+            template: indexHTML
+        })
     ]
 };

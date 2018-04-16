@@ -1,12 +1,10 @@
 const merge = require('webpack-merge');
-const path = require( 'path' );
+const path = require('path');
 const commonConfig = require('./webpack.common.js');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const indexHTML = path.resolve( __dirname, '../index.html' )
 
 module.exports = merge(commonConfig, {
     devtool: 'source-map',
@@ -59,12 +57,6 @@ module.exports = merge(commonConfig, {
     },
     mode: 'production',
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            title: 'Elbert Cortez',
-            hash: true,
-            template: indexHTML
-        }),
         new webpack.LoaderOptionsPlugin({
             // minimize: true,
             debug: false
