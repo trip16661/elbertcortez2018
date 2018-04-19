@@ -1,7 +1,8 @@
 .hero {
     height: 100vh;
     margin-bottom: 4.4rem;
-    background: url('./assets/images/svg/hero-bg1.svg') no-repeat;
+    background: url('./assets/images/svg/hero-background.svg') no-repeat;
+    background-position: 0 -3px;
     background-size: cover;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,24 @@
+<svg width="1907px" height="956px" viewBox="0 0 1907 956" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <linearGradient x1="2.98745075%" y1="84.4493164%" x2="75.4831595%" y2="6.79631148%" id="linearGradient-1">
+      <stop stop-color="#74BA39" offset="0%"></stop>
+      <stop stop-color="#B9DE61" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="2.98745075%" y1="84.4493164%" x2="75.4831595%" y2="6.79631148%" id="linearGradient-2">
+      <stop stop-color="#5AAD2A" offset="0%"></stop>
+      <stop stop-color="#A3D354" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="hero-background">
+      <g>
+        <path d="M0,955.945312 C209.890625,940.6875 594.515625,912.539062 953.5,824.140625 C1312.48438,735.742188 1717.8125,573.914062 1907,407.234375 C1907,408.181423 1907,272.436632 1907,0 L3.15156442e-18,3.5 C1.05052147e-18,638.463542 0,955.945312 0,955.945312 Z"
+          id="bottom" fill="url(#linearGradient-1)"></path>
+        <path d="M0,933.640625 C207.445312,906.46875 514.664062,888.421875 953.5,688.382812 C1392.33594,488.34375 1597.47656,265.90625 1756.82813,0 C1756.82812,2.33333333 1171.21875,3.5 5.71427061e-14,3.5 C1.90475687e-14,623.59375 0,933.640625 0,933.640625 Z"
+          id="top" fill="url(#linearGradient-2)"></path>
+      </g>
+    </g>
+  </g>
+</svg>
