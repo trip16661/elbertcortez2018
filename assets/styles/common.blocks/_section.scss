@@ -70,6 +70,14 @@
     &--color-darkgray {
         background-color: $section-footer-color;
     }
+    &__portfolio {
+        padding-top: $base-padding*1.8;
+        padding-bottom: $base-padding*1.8;
+        @include for-size(md) {
+            padding-top: $base-padding*4;
+            padding-bottom: $base-padding*4;
+        }
+    }
     &__workflow {
         line-height: 1.2375rem;
     }
