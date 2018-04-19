@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(commonConfig, {
     devtool: 'source-map',
@@ -33,25 +34,8 @@ module.exports = merge(commonConfig, {
             {
                 test: /\.(html)$/,
                 use: {
-                    loader: 'html-loader',
-                    options: {
-                        root: path.resolve(__dirname, '../'),
-                        attrs: [':data-src']
-                    }
+                    loader: 'html-loader'
                 }
-            },
-            {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                    'file-loader',
-                    {
-                        loader: 'img-loader',
-                        options: {
-                            limit: 15000,
-                            name: 'images/[name].[ext]'
-                        }
-                    },
-                ],
             }
         ]
     },
@@ -68,6 +52,23 @@ module.exports = merge(commonConfig, {
         new ExtractTextPlugin('styles.css'),
         new CleanWebpackPlugin(['dist'], {
             root: path.resolve( __dirname, '../' )
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+              from: './*.txt',
+              to: '../dist',
+              toType: 'dir'
+            },
+            {
+              from: './*.ico',
+              to: '../dist',
+              toType: 'dir'
+            },
+            {
+              from: './*.xml',
+              to: '../dist',
+              toType: 'dir'
+            },
+        ])
     ]
 });
