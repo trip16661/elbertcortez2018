@@ -27,7 +27,7 @@
         }
     }
     &__source {
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-family: $proximanova-semibold
     }
     &__rating {
