@@ -69,6 +69,11 @@ module.exports = merge(commonConfig, {
               to: '../dist',
               toType: 'dir'
             },
+            {
+              from: './CNAME',
+              to: '../dist',
+              toType: 'dir'
+            },
         ])
     ]
 });
